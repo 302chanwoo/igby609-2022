@@ -66,7 +66,6 @@ const linkStyle = css`
   padding: 5px 5px 5px 0;
   font-size: 1.3rem;
   font-weight: bold;
-  letter-spacing: 0.4px;
   font-family: Abel, sans-serif;
   color: #fff;
   @media screen and (max-width: 640px) {
