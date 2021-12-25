@@ -16,12 +16,7 @@ interface Props {
       frontmatter: {
         date: string;
         title: string;
-        thumbnail: {
-          childImageSharp: {
-            gatsbyImageData: IGatsbyImageData;
-          };
-        };
-        hero_image: {
+        featuredImage: {
           childImageSharp: {
             gatsbyImageData: IGatsbyImageData;
           };
@@ -32,9 +27,9 @@ interface Props {
 }
 const PicturesPost = ({ data }: Props) => {
   console.log('detail', data);
-  const { title, thumbnail } = data.mdx.frontmatter;
+  const { title, featuredImage } = data.mdx.frontmatter;
   const imageSrc =
-    thumbnail.childImageSharp.gatsbyImageData.images.fallback?.src;
+    featuredImage.childImageSharp.gatsbyImageData.images.fallback?.src;
   return (
     <Layout>
       <Seo title={title} image={imageSrc} />
@@ -44,7 +39,7 @@ const PicturesPost = ({ data }: Props) => {
       </div>
 
       {/* <GatsbyImage
-        image={data.mdx.frontmatter.hero_image.childImageSharp.gatsbyImageData}
+        image={data.mdx.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
         alt=""
       /> */}
       {/* <div>
@@ -78,12 +73,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
-        thumbnail {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        hero_image {
+        featuredImage {
           childImageSharp {
             gatsbyImageData
           }

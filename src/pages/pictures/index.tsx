@@ -3,19 +3,8 @@ import { Link, graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
+import { Node } from '../../types';
 
-interface Node {
-  id: string;
-  body: string;
-  slug: string;
-  frontmatter: {
-    date: string;
-    title: string;
-    thumbnail: {
-      childImageSharp: { gatsbyImageData: IGatsbyImageData };
-    };
-  };
-}
 interface Props {
   data: {
     allMdx: {
@@ -34,9 +23,10 @@ const PicturesPage = ({ data }: Props) => {
             <Link to={`/pictures/${node.slug}`}>{node.frontmatter.title}</Link>
           </h2>
           <p>Posted: {node.frontmatter.date}</p>
-          {/* <img src={node.frontmatter.thumbnail} alt="" /> */}
-          <ThumbnailImage
-            image={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
+          <FeaturedImage
+            image={
+              node.frontmatter.featuredImage.childImageSharp.gatsbyImageData
+            }
             alt="Post Item Image"
           />
         </article>
@@ -44,7 +34,7 @@ const PicturesPage = ({ data }: Props) => {
     </div>
   );
 };
-const ThumbnailImage = styled(GatsbyImage)`
+const FeaturedImage = styled(GatsbyImage)`
   overflow: hidden;
   width: 100%;
   height: 200px;
@@ -61,12 +51,7 @@ export const query = graphql`
         frontmatter {
           date(formatString: "MMMM D, YYYY")
           title
-          thumbnail {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
-          hero_image {
+          featuredImage {
             childImageSharp {
               gatsbyImageData
             }

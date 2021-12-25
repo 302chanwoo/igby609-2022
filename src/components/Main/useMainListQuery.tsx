@@ -13,12 +13,7 @@ export const useMainListQuery = () => {
             date(formatString: "MMMM D, YYYY")
             title
             categories
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-            hero_image {
+            featuredImage {
               childImageSharp {
                 gatsbyImageData
               }

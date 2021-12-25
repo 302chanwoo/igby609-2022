@@ -14,10 +14,7 @@ export interface Node {
     date: string;
     title: string;
     categories: [];
-    thumbnail: {
-      childImageSharp: { gatsbyImageData: IGatsbyImageData };
-    };
-    hero_image: {
+    featuredImage: {
       childImageSharp: { gatsbyImageData: IGatsbyImageData };
     };
   };

@@ -13,14 +13,9 @@ export const useDigitalPaintingListQuery = () => {
             date(formatString: "MMMM D, YYYY")
             title
             categories
-            thumbnail {
+            featuredImage {
               childImageSharp {
-                gatsbyImageData
-              }
-            }
-            hero_image {
-              childImageSharp {
-                gatsbyImageData
+                gatsbyImageData(width: 400)
               }
             }
           }

@@ -12,8 +12,8 @@ const ImageItem = ({ node }: Props) => {
   return (
     <div key={node.id} css={itemStyle}>
       <Link to={`/pictures/${node.slug}`} css={linkStyle}>
-        <ThumbnailImage
-          image={node.frontmatter.thumbnail.childImageSharp.gatsbyImageData}
+        <FeaturedImage
+          image={node.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
           alt="Post Item Image"
         />
       </Link>
@@ -23,8 +23,6 @@ const ImageItem = ({ node }: Props) => {
         </Link>
         <p css={dateStyle}>{node.frontmatter.date}</p>
       </div>
-
-      {/* <img src={node.frontmatter.thumbnail} alt="" /> */}
     </div>
   );
 };
@@ -34,7 +32,7 @@ const itemStyle = css``;
 const linkStyle = css`
   display: block;
 `;
-const ThumbnailImage = styled(GatsbyImage)`
+const FeaturedImage = styled(GatsbyImage)`
   overflow: hidden;
   width: 100%;
   height: 200px;
