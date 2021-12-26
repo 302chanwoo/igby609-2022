@@ -26,7 +26,6 @@ interface Props {
   };
 }
 const PicturesPost = ({ data }: Props) => {
-  console.log('detail', data);
   const { title, featuredImage } = data.mdx.frontmatter;
   const imageSrc =
     featuredImage.childImageSharp.gatsbyImageData.images.fallback?.src;

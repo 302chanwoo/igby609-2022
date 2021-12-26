@@ -7,20 +7,20 @@ module.exports = {
     siteUrl: 'https://igby609.com',
   },
   plugins: [
-    `gatsby-plugin-cname`,
-    {
-      resolve: 'gatsby-plugin-typescript',
-      options: {
-        isTSX: true,
-        allExtensions: true,
-      },
-    },
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
         trackingId: `UA-65527340-1`, // 측정 ID
         head: false, // head에 tracking script를 넣고 싶다면 true로 변경 
         anonymize: true,
+      },
+    },
+    `gatsby-plugin-cname`,
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
       },
     },
     `gatsby-plugin-emotion`,

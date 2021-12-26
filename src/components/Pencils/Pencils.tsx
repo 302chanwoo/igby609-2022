@@ -9,7 +9,6 @@ const Pencils = () => {
   const {
     allMdx: { nodes },
   } = pictures;
-  console.log('pictures', pictures);
   return (
     <div css={containerStyle}>
       <h2 css={titleStyle}>PENCIL</h2>

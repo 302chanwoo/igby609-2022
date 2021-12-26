@@ -9,7 +9,6 @@ const Main = () => {
   const {
     allMdx: { nodes },
   } = pictures;
-  console.log('pictures', pictures);
   return (
     <div css={containerStyle}>
       <ImageList list={nodes} />

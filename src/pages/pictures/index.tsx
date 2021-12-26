@@ -13,7 +13,6 @@ interface Props {
   };
 }
 const PicturesPage = ({ data }: Props) => {
-  console.log(data);
   return (
     <div>
       Pictures
