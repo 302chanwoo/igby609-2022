@@ -8,11 +8,11 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-gtag`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: `G-HNG84ZBR5Z`, // 측정 ID
-        head: false, // head에 tracking script를 넣고 싶다면 true로 변경 
-        anonymize: true,
+        trackingIds: [
+          "G-HNG84ZBR5Z", // Google Analytics / GA
+        ],
       },
     },
     `gatsby-plugin-cname`,
