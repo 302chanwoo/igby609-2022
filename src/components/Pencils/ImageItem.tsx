@@ -9,6 +9,7 @@ interface Props {
   node: Node;
 }
 const ImageItem = ({ node }: Props) => {
+  console.log(node.frontmatter.date);
   return (
     <div key={node.id} css={itemStyle}>
       <Link to={`/pictures/${node.slug}`} css={linkStyle}>

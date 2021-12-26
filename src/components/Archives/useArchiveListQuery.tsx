@@ -7,7 +7,7 @@ export const useArchiveListQuery = () => {
       allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "YYYY.MM.DD")
             title
             categories
             featuredImage {

@@ -10,7 +10,7 @@ export const useDigitalPaintingListQuery = () => {
       ) {
         nodes {
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "YYYY.MM.DD")
             title
             categories
             featuredImage {
