@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: 'https://stage.igby609.com',
   },
   plugins: [
+    `gatsby-plugin-cname`,
     {
       resolve: 'gatsby-plugin-typescript',
       options: {
