@@ -4,7 +4,7 @@ module.exports = {
     description: `Igby609 is an illustrator`,
     author: `@Igby609`,
     defaultImage: `/igby609.jpg`,
-    siteUrl: 'https://stage.igby609.com',
+    siteUrl: 'https://igby609.com',
   },
   plugins: [
     `gatsby-plugin-cname`,
@@ -13,6 +13,14 @@ module.exports = {
       options: {
         isTSX: true,
         allExtensions: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-65527340-1`, // 측정 ID
+        head: false, // head에 tracking script를 넣고 싶다면 true로 변경 
+        anonymize: true,
       },
     },
     `gatsby-plugin-emotion`,
