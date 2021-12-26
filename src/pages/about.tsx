@@ -73,6 +73,22 @@ const About = () => {
                 </i>
               </a>
             </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCCO-RxBMS-vmmbDQ2uGCVyg"
+                target="_blank"
+                title="새창열림"
+              >
+                <i className="ico">
+                  <StaticImage
+                    src="../images/ico_youtube.png"
+                    width={26}
+                    formats={['png']}
+                    alt="youtube"
+                  />
+                </i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
